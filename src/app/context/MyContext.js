@@ -5,6 +5,7 @@ import React, { createContext ,useEffect,useState } from 'react'
 
 
 
+
 export const eventContext = createContext(null);
 
 
@@ -18,8 +19,8 @@ useEffect(()=>{
   }
 },[])
 
-    const [events, setEvents] = useState([]);
-    const [UserSelectedEvent, setUserSelectedEvent] = useState([]);
+    const [events, setEvents] = useState<object | null>(null);
+    const [UserSelectedEvent, setUserSelectedEvent] = useState<object | null>(null);
     const [loading, setloading] = useState(true);
    
     
